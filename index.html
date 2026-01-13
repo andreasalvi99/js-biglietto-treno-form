@@ -21,14 +21,16 @@
           <input type="text" id="username-input" />
           <input type="number" id="km-input" />
           <select name="Seleziona.." id="age-input">
-            <option value="minorenne">minorenne</option>
-            <option value="maggiorenne">maggiorenne</option>
-            <option value="over 60">Over 65</option>
+            <option value="Minorenne">Minorenne</option>
+            <option value="Maggiorenne">Maggiorenne</option>
+            <option value="Over65">Over 65</option>
           </select>
+          <div>
+            <button type="submit" id="send-btn" class="btn btn-primary mt-4">
+              Invia
+            </button>
+          </div>
         </form>
-        <button type="submit" id="send-btn" class="btn btn-primary mt-4">
-          Invia
-        </button>
       </div>
     </section>
 
@@ -39,6 +41,11 @@
           <div class="col-4">Nome passeggero</div>
           <div class="col-4">Offerta</div>
           <div class="col-4">Costo biglietto</div>
+        </div>
+        <div class="row">
+          <div id="owners-name" class="col-4"></div>
+          <div id="fare" class="col-4"></div>
+          <div id="ticket-price-value" class="col-4"></div>
         </div>
       </div>
     </section>

@@ -22,13 +22,20 @@ ticketData.addEventListener("submit", (e) => {
   let ticketPrice = kmInput.value * 0.21;
   console.log("ticketPrice:", ticketPrice.toFixed(2) + "€");
 
-  if ()
+  ownersname.innerText = usernameInput.value;
 
-
-
-
-
-
+  if (ageInput.value === "Maggiorenne") {
+    ticketPriceValue.innerText = ticketPrice + "€";
+    fareName.innerText = "Biglietto standard";
+  } else if (ageInput.value === "Minorenne") {
+    ticketPriceValue.innerText =
+      (ticketPrice - (ticketPrice * 20) / 100).toFixed(2) + "€";
+    fareName.innerText = "Sconto Under18";
+  } else if (ageInput.value === "Over65") {
+    ticketPriceValue.innerText =
+      (ticketPrice - (ticketPrice * 40) / 100).toFixed(2) + "€";
+    fareName.innerText = "Sconto Over65";
+  }
 });
 
 // ?? Faccio sparire la sezione del biglietto in fase di apertura della pagina

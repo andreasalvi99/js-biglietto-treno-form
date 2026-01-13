@@ -13,33 +13,64 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body class="bg-success">
     <!-- Inserimento dati -->
-    <section id="data-entry">
+    <h1 class="text-white text-center mt-3">
+      CALCOLA IL PREZZO DEL TUO BIGLIETTO
+    </h1>
+    <section id="data-entry" class="bg-white my-3">
       <div class="container text-center my-5">
-        <form id="ticket-data">
-          <input type="text" id="username-input" />
-          <input type="number" id="km-input" />
-          <select name="Seleziona.." id="age-input">
-            <option value="Minorenne">Minorenne</option>
-            <option value="Maggiorenne">Maggiorenne</option>
-            <option value="Over65">Over 65</option>
-          </select>
-
-          <button type="submit" id="send-btn" class="btn btn-primary mt-4">
-            Invia
-          </button>
+        <form id="ticket-data" class="row g-3">
+          <div class="col-4">
+            <label for="username-input">Nome Cognome</label>
+            <input
+              type="text"
+              id="username-input"
+              class="form-control border border-success"
+              name="username-input"
+            />
+          </div>
+          <div class="col-4">
+            <label for="km-input">Km da percorrere</label>
+            <input
+              type="number"
+              id="km-input"
+              class="form-control border border-success"
+              name="km-input"
+            />
+          </div>
+          <div class="col-4">
+            <label for="età">Fascia d'età</label>
+            <select
+              name="età"
+              id="age-input"
+              class="form-select border border-success"
+            >
+              <option value="Minorenne">Minorenne</option>
+              <option value="Maggiorenne">Maggiorenne</option>
+              <option value="Over65">Over 65</option>
+            </select>
+          </div>
+          <div class="container text-center">
+            <button type="submit" id="send-btn" class="btn btn-primary my-3">
+              Invia
+            </button>
+          </div>
         </form>
       </div>
     </section>
 
+    <div>
+      <h2 class="fs-2 text-white text-center mb-3">IL TUO BIGLIETTO</h2>
+    </div>
+
     <!-- Outcome -->
-    <section id="outcome">
+    <section id="outcome" class="bg-white mb-3">
       <div class="container p-3 text-center">
         <div class="row g-3">
-          <div class="col-4">Nome passeggero</div>
-          <div class="col-4">Offerta</div>
-          <div class="col-4">Costo biglietto</div>
+          <div class="col-4 text-black fw-semibold">Nome passeggero</div>
+          <div class="col-4 text-black fw-semibold">Offerta</div>
+          <div class="col-4 text-black fw-semibold">Costo biglietto</div>
         </div>
         <div class="row">
           <div id="owners-name" class="col-4"></div>

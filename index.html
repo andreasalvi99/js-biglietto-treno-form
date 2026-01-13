@@ -16,7 +16,7 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body class="bg-success">
+  <body>
     <!-- Inserimento dati -->
     <h1 class="text-white text-center mt-3">
       CALCOLA IL PREZZO DEL TUO BIGLIETTO
@@ -31,7 +31,7 @@
             <input
               type="text"
               id="username-input"
-              class="form-control border border-success"
+              class="form-control"
               name="username-input"
               placeholder="Inserisci qui il tuo nome..."
             />
@@ -43,18 +43,14 @@
             <input
               type="number"
               id="km-input"
-              class="form-control border border-success"
+              class="form-control"
               name="km-input"
               placeholder="Inserisci qui i km da percorrere..."
             />
           </div>
           <div class="col-4">
             <label for="età" class="fw-semibold mb-3">Fascia d'età</label>
-            <select
-              name="età"
-              id="age-input"
-              class="form-select border border-success"
-            >
+            <select name="età" id="age-input" class="form-select">
               <option value="Minorenne">Minorenne</option>
               <option value="Maggiorenne">Maggiorenne</option>
               <option value="Over65">Over 65</option>

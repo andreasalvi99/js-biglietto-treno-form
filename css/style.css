@@ -9,3 +9,7 @@
   height: 40%;
   border-radius: 7px;
 }
+
+body {
+  background-image: linear-gradient(to right, black, purple);
+}

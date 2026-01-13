@@ -11,11 +11,21 @@ const ticketPriceValue = document.getElementById("ticket-price-value");
 const user = usernameInput.value;
 const ageInfo = ageInput.value;
 
-// ticket.style.display += "none";
+ticket.classList.add("d-none");
 
 // ?? prevengo il comportamento di defasult del form
 ticketData.addEventListener("submit", (e) => {
   e.preventDefault();
+
+  if (kmInput.value < 0) {
+    alert("Il valore inserito non è ammesso");
+    throw new Error("Value in less than 0");
+  }
+
+  if (!usernameInput.value || !ageInput.value || !kmInput.value) {
+    alert("Hai dimenticato qualcosa :(");
+    return;
+  }
 
   console.log(ageInput.value);
   console.log(kmInput.value);
@@ -45,6 +55,8 @@ ticketData.addEventListener("submit", (e) => {
     outputMessage =
       "Il prezzo del tuo biglietto è " + ticketPriceValue.innerText;
   }
+
+  ticket.classList.remove("d-none");
 
   console.log(outputMessage);
 

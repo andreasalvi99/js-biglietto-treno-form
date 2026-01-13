@@ -11,7 +11,7 @@ const ticketPriceValue = document.getElementById("ticket-price-value");
 const user = usernameInput.value;
 const ageInfo = ageInput.value;
 
-// ticket.classList.add("d-none");
+ticket.classList.add("d-none");
 
 // ?? prevengo il comportamento di defasult del form
 ticketData.addEventListener("submit", (e) => {

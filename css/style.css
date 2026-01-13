@@ -22,8 +22,8 @@ div > img {
 }
 
 .chat {
-  height: 70px;
-  width: 70px;
+  height: 65px;
+  width: 65px;
   border-radius: 50%;
   position: absolute;
   right: 15px;
@@ -37,7 +37,7 @@ div > img {
 .chat > img {
   height: 40px;
   width: 40px;
-  margin-top: 12px;
+  margin-top: 10px;
   position: relative;
 }
 
@@ -48,5 +48,5 @@ div > img {
   border-radius: 50%;
   background-color: red;
   z-index: 10;
-  transform: translate(40px, -40px);
+  transform: translate(37px, -40px);
 }

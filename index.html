@@ -4,24 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <!-- Inserimento dati -->
     <section id="data-entry">
-      <form id="ticket-data">
-        <input type="text" id="username-input" />
-        <input type="number" id="km-input" />
-        <select name="Seleziona.." id="age-input">
-          <option value="minorenne">minorenne</option>
-          <option value="maggiorenne">maggiorenne</option>
-          <option value="over 60">Over 60</option>
-        </select>
-        <button type="submit" id="send-btn">Invia</button>
-      </form>
+      <div class="container text-center my-5">
+        <form id="ticket-data">
+          <input type="text" id="username-input" />
+          <input type="number" id="km-input" />
+          <select name="Seleziona.." id="age-input">
+            <option value="minorenne">minorenne</option>
+            <option value="maggiorenne">maggiorenne</option>
+            <option value="over 60">Over 60</option>
+          </select>
+        </form>
+        <button type="submit" id="send-btn" class="btn btn-primary mt-4">
+          Invia
+        </button>
+      </div>
     </section>
 
     <!-- Outcome -->
-    <section id="outcome"></section>
+    <section id="outcome">
+      <div class="container p-3 text-center">
+        <div class="row g-3">
+          <div class="col-4">Nome passeggero</div>
+          <div class="col-4">Offerta</div>
+          <div class="col-4">Costo biglietto</div>
+        </div>
+      </div>
+    </section>
     <script src="./js/main.js"></script>
   </body>
 </html>

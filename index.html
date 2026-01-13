@@ -12,17 +12,22 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body class="bg-success">
     <!-- Inserimento dati -->
     <h1 class="text-white text-center mt-3">
       CALCOLA IL PREZZO DEL TUO BIGLIETTO
     </h1>
-    <section id="data-entry" class="bg-white my-3">
-      <div class="container text-center my-5">
+    <section id="data-entry" class="my-3">
+      <div class="container text-center my-5 bg-white">
         <form id="ticket-data" class="row g-3">
           <div class="col-4">
-            <label for="username-input">Nome Cognome</label>
+            <label for="username-input" class="fw-semibold mb-3"
+              >Nome Cognome</label
+            >
             <input
               type="text"
               id="username-input"
@@ -31,7 +36,9 @@
             />
           </div>
           <div class="col-4">
-            <label for="km-input">Km da percorrere</label>
+            <label for="km-input" class="fw-semibold mb-3"
+              >Km da percorrere</label
+            >
             <input
               type="number"
               id="km-input"
@@ -40,7 +47,7 @@
             />
           </div>
           <div class="col-4">
-            <label for="età">Fascia d'età</label>
+            <label for="età" class="fw-semibold mb-3">Fascia d'età</label>
             <select
               name="età"
               id="age-input"
@@ -65,8 +72,8 @@
     </div>
 
     <!-- Outcome -->
-    <section id="outcome" class="bg-white mb-3">
-      <div class="container p-3 text-center">
+    <section id="outcome" class="mb-3">
+      <div class="container p-3 text-center bg-white">
         <div class="row g-3">
           <div class="col-4 text-black fw-semibold">Nome passeggero</div>
           <div class="col-4 text-black fw-semibold">Offerta</div>

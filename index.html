@@ -6,16 +6,22 @@
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <input type="text" id="username-input" />
-      <input type="number" id="km-input" />
-      <select name="Seleziona.." id="age-input">
-        <option value="minorenne">minorenne</option>
-        <option value="maggiorenne">maggiorenne</option>
-        <option value="over 60">Over 60</option>
-      </select>
-      <button id="send-btn">Invia</button>
-    </div>
+    <!-- Inserimento dati -->
+    <section id="data-entry">
+      <form id="ticket-data">
+        <input type="text" id="username-input" />
+        <input type="number" id="km-input" />
+        <select name="Seleziona.." id="age-input">
+          <option value="minorenne">minorenne</option>
+          <option value="maggiorenne">maggiorenne</option>
+          <option value="over 60">Over 60</option>
+        </select>
+        <button type="submit" id="send-btn">Invia</button>
+      </form>
+    </section>
+
+    <!-- Outcome -->
+    <section id="outcome"></section>
     <script src="./js/main.js"></script>
   </body>
 </html>

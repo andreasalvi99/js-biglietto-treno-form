@@ -13,3 +13,9 @@
 body {
   background-image: linear-gradient(to right, black, purple);
 }
+
+div > img {
+  height: 20px;
+  width: 20px;
+  color: black;
+}

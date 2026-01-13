@@ -11,7 +11,7 @@ const ticketPriceValue = document.getElementById("ticket-price-value");
 const user = usernameInput.value;
 const ageInfo = ageInput.value;
 
-ticket.classList.add("d-none");
+// ticket.classList.add("d-none");
 
 // ?? prevengo il comportamento di defasult del form
 ticketData.addEventListener("submit", (e) => {
@@ -33,25 +33,28 @@ ticketData.addEventListener("submit", (e) => {
   let ticketPrice = kmInput.value * 0.21;
   console.log("ticketPrice:", ticketPrice.toFixed(2) + "€");
 
-  ownersname.innerText = usernameInput.value;
+  ownersname.innerHTML += `
+  <img src="./img/person-fill.svg" alt="" />
+  ${usernameInput.value}`;
 
   let outputMessage = "";
 
   if (ageInput.value === "Maggiorenne") {
-    ticketPriceValue.innerText = ticketPrice + "€";
-    fareName.innerText = "Biglietto standard";
+    ticketPriceValue.innerHTML += `
+      <img src="./img/currency-exchange.svg" alt="" />  ${ticketPrice}€`;
+    fareName.innerHTML = `<img src="./img/tag-fill.svg" alt=""> Biglietto standard`;
     outputMessage =
       "Il prezzo del tuo biglietto è " + ticketPriceValue.innerText;
   } else if (ageInput.value === "Minorenne") {
-    ticketPriceValue.innerText =
-      (ticketPrice - (ticketPrice * 20) / 100).toFixed(2) + "€";
-    fareName.innerText = "Sconto Under18";
+    ticketPriceValue.innerHTML += `<img src="./img/currency-exchange.svg" alt="" />
+      ${(ticketPrice - (ticketPrice * 20) / 100).toFixed(2)} €`;
+    fareName.innerHTML = `<img src="./img/tag-fill.svg" alt=""> Sconto Under18`;
     outputMessage =
       "Il prezzo del tuo biglietto è " + ticketPriceValue.innerText;
   } else if (ageInput.value === "Over65") {
-    ticketPriceValue.innerText =
-      (ticketPrice - (ticketPrice * 40) / 100).toFixed(2) + "€";
-    fareName.innerText = "Sconto Over65";
+    ticketPriceValue.innerHTML += `<img src="./img/currency-exchange.svg" alt="" />
+      ${(ticketPrice - (ticketPrice * 40) / 100).toFixed(2)} €`;
+    fareName.innerHTML = `<img src="./img/tag-fill.svg" alt=""> Sconto Over65`;
     outputMessage =
       "Il prezzo del tuo biglietto è " + ticketPriceValue.innerText;
   }

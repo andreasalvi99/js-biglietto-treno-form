@@ -16,6 +16,7 @@ const ageInfo = ageInput.value;
 // ?? prevengo il comportamento di defasult del form
 ticketData.addEventListener("submit", (e) => {
   e.preventDefault();
+
   console.log(ageInput.value);
   console.log(kmInput.value);
   console.log(usernameInput.value);
@@ -24,18 +25,32 @@ ticketData.addEventListener("submit", (e) => {
 
   ownersname.innerText = usernameInput.value;
 
+  let outputMessage = "";
+
   if (ageInput.value === "Maggiorenne") {
     ticketPriceValue.innerText = ticketPrice + "€";
     fareName.innerText = "Biglietto standard";
+    outputMessage =
+      "Il prezzo del tuo biglietto è " + ticketPriceValue.innerText;
   } else if (ageInput.value === "Minorenne") {
     ticketPriceValue.innerText =
       (ticketPrice - (ticketPrice * 20) / 100).toFixed(2) + "€";
     fareName.innerText = "Sconto Under18";
+    outputMessage =
+      "Il prezzo del tuo biglietto è " + ticketPriceValue.innerText;
   } else if (ageInput.value === "Over65") {
     ticketPriceValue.innerText =
       (ticketPrice - (ticketPrice * 40) / 100).toFixed(2) + "€";
     fareName.innerText = "Sconto Over65";
+    outputMessage =
+      "Il prezzo del tuo biglietto è " + ticketPriceValue.innerText;
   }
+
+  console.log(outputMessage);
+
+  usernameInput.value = "";
+  ageInput.value = "";
+  kmInput.value = "";
 });
 
 // ?? Faccio sparire la sezione del biglietto in fase di apertura della pagina

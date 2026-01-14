@@ -8,8 +8,6 @@ const ticket = document.getElementById("outcome");
 const ownersname = document.getElementById("owners-name");
 const fareName = document.getElementById("fare");
 const ticketPriceValue = document.getElementById("ticket-price-value");
-const user = usernameInput.value;
-const ageInfo = ageInput.value;
 
 ticket.classList.add("d-none");
 
@@ -27,11 +25,7 @@ ticketData.addEventListener("submit", (e) => {
     return;
   }
 
-  console.log(ageInput.value);
-  console.log(kmInput.value);
-  console.log(usernameInput.value);
   let ticketPrice = kmInput.value * 0.21;
-  console.log("ticketPrice:", ticketPrice.toFixed(2) + "€");
 
   ownersname.innerHTML += `
   <img src="./img/person-fill.svg" alt="" />

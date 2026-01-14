@@ -59,7 +59,3 @@ ticketData.addEventListener("submit", (e) => {
   ageInput.value = "";
   kmInput.value = "";
 });
-
-// ?? Faccio sparire la sezione del biglietto in fase di apertura della pagina
-// ?? Il programma già chiede all'utente i dati tramite gli imput
-// ?? Procedo al calcolo del prezzo del biglietto sulla base dei km da fare

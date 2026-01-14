@@ -27,9 +27,7 @@ ticketData.addEventListener("submit", (e) => {
 
   let ticketPrice = kmInput.value * 0.21;
 
-  ownersname.innerHTML += `
-  <img src="./img/person-fill.svg" alt="" />
-  ${usernameInput.value}`;
+  ownersname.innerHTML += `<img src="./img/person-fill.svg" alt="" /> ${usernameInput.value}`;
 
   let outputMessage = "";
 
